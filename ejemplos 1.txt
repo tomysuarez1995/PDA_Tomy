@@ -1,0 +1,229 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "7eb385f0",
+   "metadata": {},
+   "source": [
+    "# <center> <span style='color:#3A40A2 '> Ejemplos clase Módulo 1</span></center>\n",
+    "***\n",
+    "\n",
+    "La siguiente notebook contiene ejemplos de la clase del Módulo 1 de la Unidad Curricular **Programación Digital Avanzada** de la carrera de *Ingeniería Biomédica* de la UTEC.\n",
+    "\n",
+    "**Profesor Adjunto:** Mag. Bioing. Baldezzari Lucas\n",
+    "\n",
+    "<p style='text-align: left;'> V2022 </p>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a3038688",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "\n",
+    "##  <span style='color:#3A40A2 '> Instalando Python </span>\n",
+    "\n",
+    "Lo primero que tenemos que hacer para utilizar Python es descargar el intérprete. \n",
+    "\n",
+    "Descargamos la versión deseada desde [python.org/downloads](https://www.python.org/downloads/)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0009abf5",
+   "metadata": {},
+   "source": [
+    "##  <span style='color:#3A40A2 '> Anaconda</span>\n",
+    "\n",
+    "¿Qué es? → Plataforma Open Source para trabajar con Python (y R) en el procesamiento de datos y ciencias de la computación. \n",
+    "\n",
+    "Ventajas → Librerías pre instaladas de Python mayormente utilizadas para el análisis de datos y cálculos numéricos.\n",
+    "\n",
+    "Administración de enviroments → Permite la administración de diferentes ambientes de trabajo utilizando el gestor conda. Es posible instalar diferentes versiones de Python, de librerías, etc.\n",
+    "\n",
+    "### Instlación\n",
+    "\n",
+    "Ingresar en [anaconda.com/products/individual](https://www.anaconda.com/products/individual) y descargar la última versiónn.\n",
+    "\n",
+    "### Creando un ambiente nuevo\n",
+    "\n",
+    "La forma de crear un ambiente nuevo es\n",
+    "```Terminal\n",
+    ">> conda create --name miAmbiente\n",
+    "```\n",
+    "\n",
+    "Donde el comando *create* le dice a conda que queremos crear un nuevo ambiente utilizando un nombre dado por el argumento *--name* seguido del nombre que deseamos.\n",
+    "\n",
+    "Si quisieramos especificar alguna versión de Python en particular, debemos agregar el argumento *pyhthon=3.x*. Por ejemplo, si queremos que en el enviroment se instale la versión 3.10 de Python, haríamos.\n",
+    "\n",
+    "```Terminal\n",
+    ">> conda create --name miAmbientePy310 python=3.10\n",
+    "```\n",
+    "\n",
+    "##### Empezando con Anaconda\n",
+    "\n",
+    "Si necesitan profundizar en la instalación y manejo de enviroments usando Anaconda pueden entrar a [Getting started with conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html).\n",
+    "\n",
+    "\n",
+    "##### Cheatsheet\n",
+    "\n",
+    "Siempre es bueno tener una \"hoja de ayuda\" para poder repasar o recordar los comandos más utilizados. Pueden ver la misma en [Conda Cheatsheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d2f08579",
+   "metadata": {},
+   "source": [
+    "##  <span style='color:#3A40A2 '> Jupyter notebook</span>\n",
+    "\n",
+    "¿Qué es? → Plataforma Open Source para el desarrollo, documentación y visualización de código, datos, gráficos, entre otros.\n",
+    "\n",
+    "Ventajas → Se ejecuta en un explorador web. Permite escribir texto, código ejecutable, gráficos, imágenes, y más.\n",
+    "\n",
+    "Enviroments → Es posible utilizar enviroments diferentes –creados previamente en nuestra pc- para cada notebook de trabajo."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "71a90f59",
+   "metadata": {},
+   "source": [
+    "##### Ejecutando código con el kernel de Jupyter\n",
+    "\n",
+    "Es posible ejecutar código y scripts completos de Python usando el Kernel de Jupyter Notebook."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "ee3a5a5f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hola Mundo\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hola Mundo\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "7658ea28",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 3, 6, 9, 12, 15, 18]"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "num = range(0,20)\n",
+    "[num for num in num if num%3 == 0]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3adbebb4",
+   "metadata": {},
+   "source": [
+    "#### Editando nuestra Jupyer Notebook.\n",
+    "\n",
+    "Es pisble agregar imágenes, links, diferentes tamaños en la tipografía, diferentes tipogragías, cambiar los colores de las fuentes, entre otras cosas utilizando los comandos **Markdown**. \n",
+    "\n",
+    "Una guía oficial puede verse en [Markdown Cells](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6b1ba9a3",
+   "metadata": {},
+   "source": [
+    "##  <span style='color:#3A40A2 '> Sistema de control de versiones (VCS)</span>\n",
+    "\n",
+    "- Herramientas que ayudan a rastrear y gestionar cambios en códigos de software.\n",
+    "- Posibilita ir “hacia atrás en el tiempo” y comparar y/o volver a versiones anteriores.\n",
+    "- Trazabilidad. Los cambios de cada desarrollador –sin importar que tan pequeños fueran y el momento en que fueron hechos- son visibles por todo el equipo de desarrollo.\n",
+    "- Flujos independientes de trabajo mediante ramas.\n",
+    "\n",
+    "Click [acá](https://git-scm.com/downloads) para descargar Git. Siempre es bueno tener a mano la [documentación oficial](https://git-scm.com/doc).\n",
+    "\n",
+    "### Github\n",
+    "\n",
+    "- Integración con Git. Es una plataforma con funcionalidades que facilitan el uso de Git y con herramientas adicionales (ej. asignación de tareas mediante issues).\n",
+    "- Alojamiento gratuito. Repositorios públicos y privados.\n",
+    "- Forma sencilla de compartir proyectos y portafolios.\n",
+    "- Posibilidad de usar Github Copilot.\n",
+    "\n",
+    "#### Creando nuestro repositorio\n",
+    "\n",
+    "La forma más sencilla (y la cual recomiendo al iniciarse en el mundo de git) es crear un repositorio directamente en Github y luego lo clonamos en nuestra PC.\n",
+    "\n",
+    "Para esto lo primero que tenemos que hacer es ir a [github.com](https://github.com/) y crear un nuevo repositorio haciendo click en *new*. Ver la imágen debajo.\n",
+    "\n",
+    "![Figura 1](images/fig1.png)\n",
+    "\n",
+    "Se nos abrirá una página donde podremos colocar el nombre de nuestro repositorio, una pequeña descripción, si queremos que sea Público o Privado.\n",
+    "\n",
+    "Por otro lado, nos permite seleccionar si queremos que se agregue un archivo *Readme.md*. En general, este archivo es utilizado como una página de *presentación* del repositorio. De momento **no** crearemos el archivo readme.\n",
+    "\n",
+    "La figura debajo muestra la creación de un repositorio llamado *repoPrueba* el cual es público.\n",
+    "\n",
+    "![Figura 2](images/fig2.png)\n",
+    "\n",
+    "\n",
+    "Una vez que hacemos click en *Create repository* se nos abrirá una nueva ventana con información la cual debemos prestar atención.\n",
+    "\n",
+    "Veamos la siguiente figura,\n",
+    "\n",
+    "![Figura 3](images/fig3.png)\n",
+    "\n",
+    "Vemos *cuatro* secciones. En la primera, marcada con un color diferente, nos muestra el link (en este caso es https://github.com/lucasbaldezzari/repoPrueba.git) al repositorio con el cual podemos *clonar* nuestro repo haciendo desde la consola,\n",
+    "\n",
+    "```Terminal\n",
+    "C:\\myFolder> git clone https://github.com/lucasbaldezzari/repoPrueba.git\n",
+    "```\n",
+    "\n",
+    "El comando anterior nos creará una carpeta repoPrueba que contendrá el repositorio creado (de momento vacío). Si todo salió bien deberíamos ver algo similar a esto,\n",
+    "\n",
+    "![Figura 4](images/fig4.png)\n",
+    "\n",
+    "A partir de aquí podemos empezar a llenar nuestro repositorio tanto local (en nuestra PC) como remotamente (en github). A medida que avancemos en el curso iremos viendo como trabajar con nuestro repositorio, como sincronizar archivos y ver el historial de cambios sobre los mismos."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:pda]",
+   "language": "python",
+   "name": "conda-env-pda-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
