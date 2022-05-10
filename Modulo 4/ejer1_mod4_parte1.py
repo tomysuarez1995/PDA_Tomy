@@ -1,37 +1,5 @@
 ## Ejercicio 1
-class BasicStats():
 
-    def __init__(self, listaDeValores):
-        """Constructor"""
-        self.listaDeValores = listaDeValores
-
-    def getMedia(self):
-        """Calcula la media"""
-
-        return sum(self.listaDeValores)/len(self.listaDeValores)
-
-
-    def getVar(self):
-        """Calculo la varianza"""
-
-        media = self.getMedia()
-        return sum([(i-media)**2 for i in self.listaDeValores])/len(self.listaDeValores)
-
-
-    def getSDv(self):
-        """Calculo la varianza"""
-
-        media = self.getMedia()
-        return (sum([(i-media)**2 for i in self.listaDeValores])/len(self.listaDeValores))**(1/2)
-
-            
-
-lista = [1,2,3,4,5,10,2,33,4]
-
-grupoControl = BasicStats(lista)
-print(grupoControl.getMedia())
-print(grupoControl.getVar())
-print(grupoControl.getSDv())
 
 
 ## Ejercicio 1
@@ -73,3 +41,5 @@ print(grupoControl2.sdv)
 
 lista3 = [1,2,3,4,5,6,7,9,10]
 BasicStats2.getSDv(lista3)
+
+
