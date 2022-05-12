@@ -85,11 +85,15 @@ class Triangle():
             pen13 =(p3.y-p1.y)/(p3.x-p1.x)
         except:
             pen13= 0 
-        if p1==p2 or p1==p3:
+        if p1==p2 or p1==p3 or p2==p3:
             return 0
         elif  pen12 == 0 and pen13 ==0:
             return 0
-        elif p1 != p2 or p1 != p3:
+        elif (p1.x == p2.x and p1.x==p3.x and p2.x==p3.x):
+            return 0
+        elif (p1.y== p2.y and p1.y==p3.y and p2.y==p3.y):
+            return 0
+        elif p1 != p2 or p1 != p3 or p2!=p3:
             return 1
         elif pen12 != 0 and pen13 !=0:
             return 1
