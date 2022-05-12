@@ -33,13 +33,21 @@ class Triangle():
         pp1=p1[0]+p1[1]
         pp2=p2[0]+p2[1]
         pp3=p3[0]+p3[1]
+        try:
+            pen12= (p2[1]-p1[1])/(p2[0]-p1[0])
+        except:
+            pen12 = 0
+        try:
+            pen13 =(p3[1]-p1[1])/(p3[0]-p1[0])
+        except:
+            pen13= 0 
         if pp1==pp2 or pp1==pp3:
             return 0
-        elif  (p2[0]-p1[0]) == 0 and (p3[0]-p1[0]) ==0:
+        elif  pen12 == 0 and pen13 ==0:
             return 0
         elif pp1 != pp2 or pp1 != pp3:
             return 1
-        elif (p2[0]-p1[0]) != 0 and (p3[0]-p1[0]) !=0:
+        elif pen12 != 0 and pen13 !=0:
             return 1
 
     def lineas(yo):
@@ -55,27 +63,24 @@ class Triangle():
         return round(s,2)
 
     def area(yo):
-        l12= round(((((yo.p2[1]-yo.p1[1])**2)+((yo.p2[0]-yo.p1[0])**2))**(1/2)),2)
-        l23= round(((((yo.p3[1]-yo.p2[1])**2)+((yo.p3[0]-yo.p2[0])**2))**(1/2)),2)
-        l13= round(((((yo.p3[1]-yo.p1[1])**2)+((yo.p3[0]-yo.p1[0])**2))**(1/2)),2)
+        """este metodo genera el area del triangulo"""
         s= yo.perimetro()
-        areas =(s*(s-l12)*(s-l23)*(s-l13))**(1/2)
+        areas =(s*(s-yo.lineas()[0])*(s-yo.lineas()[1])*(s-yo.lineas()[2]))**(1/2)
         return round(areas, 2)
 
     def tipo(yo):
-        l12= round(((((yo.p2[1]-yo.p1[1])**2)+((yo.p2[0]-yo.p1[0])**2))**(1/2)),2)
-        l23= round(((((yo.p3[1]-yo.p2[1])**2)+((yo.p3[0]-yo.p2[0])**2))**(1/2)),2)
-        l13= round(((((yo.p3[1]-yo.p1[1])**2)+((yo.p3[0]-yo.p1[0])**2))**(1/2)),2)
-        if l12== l23 and l12==l13:
+        """este metodo nos dice que tipo de triangulo es"""
+
+        if yo.lineas()[0]== yo.lineas()[1] and yo.lineas()[0]==yo.lineas()[2]:
             return "Equilatero"
-        elif l12 != l23 and l12 != l13:
+        elif yo.lineas()[0] != yo.lineas()[1] and yo.lineas()[0] != yo.lineas()[2]:
             return "Escaleno"
         else:
             return "Isoceles"
 
-punto1=(12,7)
-punto2=(2,7)
-punto3=(15,9)
+punto1=(2,13)
+punto2=(22,7)
+punto3=(32,71)
 triangulo= Triangle(punto1, punto2, punto3)
 print(f"sus lados son: {triangulo.lineas()}")
 print(f"su perimetro es: {triangulo.perimetro()}")
