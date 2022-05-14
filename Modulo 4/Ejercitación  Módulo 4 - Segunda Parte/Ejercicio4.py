@@ -19,7 +19,6 @@ class BasicPlethy():
         """Obtiene los momentos en que ocurren los picos en la señal, codigo basado en deteccion de picos
         de mathlab"""
         picosmax= []
-        picosmin = []
         x = arange(len(self.señal))
         max= -Inf #floating point representation of (positive) infinity, sacado de numpy
         min= Inf #floating point representation of (positive) infinity, sacado de numpy
@@ -29,28 +28,30 @@ class BasicPlethy():
         umbral= .75 #valor para comparar con el anterior maximo
         for i in arange(len(self.señal)):
             señal = self.señal[i]
-            if señal > max:
+            if señal > max: #este if sirve para tomar el valor maximo y guardarlo en max y maxposit toma el valor de la copia x[i]
                 max = señal
                 maxposit = x[i]
-            elif señal < min:
+            elif señal < min:#este if sirve para tomar el valor minimo y guardarlo en min y minposit toma el valor de la copia x[i]
                 min = señal
                 minposit = x[i]
                 
             if buscar:
                 if señal < (max*umbral):
+                    """este if sirve para ir guardando en picosmax los picos maximos"""
                     picosmax.append((maxposit))
                     min = señal
                     minposit = x[i]
                     buscar = False
             else:
                 if señal > (min*umbral):
-                    picosmin.append((minposit))
+                    """este if sirve para retroalimentar los picos max y al for"""
                     max = señal
                     maxposit = x[i]
                     buscar = True
         qiqi=[]
         for j in picosmax:
-            air= j/self.fm
+            """con este for tomo los valores de los picos y los paso a segundos"""
+            air= round((j/self.fm),1)
             qiqi.append(air)
 
         return qiqi
@@ -68,7 +69,7 @@ leMandar= BasicPlethy(leListe)
 print(f"la señal tiene un tiempo de: {leMandar.duration()}")
 print(f"tiene una frecuencia cardiaca de:{leMandar.freq()}" )
 print(f"los picos ocurren en los segundos: {leMandar.piquitos()}")
-print(f"tiene:{len(leMandar.piquitos())} picos ")
+print(f"tiene: {len(leMandar.piquitos())} picos ")
 #plt.scatter(array(leMandar.piquitos())[:,0],array(leMandar.piquitos())[:,1], color='r')
 #plt.plot(leListe, color = "g")
 #plt.show()
