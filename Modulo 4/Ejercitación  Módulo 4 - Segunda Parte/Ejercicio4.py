@@ -1,13 +1,10 @@
-from cmath import inf
-from operator import le
-from numpy import NaN, Inf, arange, array
+from numpy import NaN, Inf, arange
 import matplotlib.pyplot as plt
-from utils import graficar
 class BasicPlethy():
-    """Doc acá..."""
+    """Est clase nos sirve para procesar señales plestimograficas"""
     
     def __init__(self, signal:list, fm:float = 125.):
-        """Doc del constructor..."""
+        """constructor"""
         self.señal = signal #señal
         self.fm = fm #frecuencia de muestreo
         self.T =  1/fm #Período de la señal
@@ -21,7 +18,7 @@ class BasicPlethy():
         """Obtiene los momentos en que ocurren los picos en la señal, codigo basado en deteccion de picos
         de mathlab"""
         picosmax= []
-        x = arange(len(self.señal))
+        x = arange(len(self.señal)) #generamos un array de duracion de la señal -1 valor osea 60.001-1 = 60.000, esto para guardar la ubicacion del pico
         max= -Inf #floating point representation of (positive) infinity, sacado de numpy
         min= Inf #floating point representation of (positive) infinity, sacado de numpy
         maxposit = NaN #floating point representation of Not a Number (NaN), sacado de numpy
@@ -47,7 +44,6 @@ class BasicPlethy():
                     max = señal
                     maxposit = x[i]
                     buscar = True
-
         return picosmax
 
     def momentos(self):   
@@ -67,14 +63,12 @@ class BasicPlethy():
 
 lePlesti = open("plethysmography.txt", "r")
 leListe = [float(valor) for valor in lePlesti.read().split()]
-lista2 = leListe[:7500]
 leMandar= BasicPlethy(leListe)
 
 print(f"los picos ocurren en los segundos: {leMandar.momentos()}")
 print(f"tiene: {len(leMandar.momentos())} picos ")
 print(f"la señal tiene un tiempo de: {leMandar.duration()}")
-print(f"tiene una frecuencia cardiaca de:{leMandar.freq()} LPM" )
-# plt.plot(lista2)
-# plt.show()
+print(f"tiene una frecuencia cardiaca de: {leMandar.freq()} LPM" )
+
 
 
