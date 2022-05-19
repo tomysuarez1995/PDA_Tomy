@@ -59,6 +59,8 @@ class BasicPlethy():
     def freq(self)->float:
         """Calcula la frecuencia cardíaca en latidos por minutos (Heart Rate) en los primeros 10 seg"""
         return round((len(self.piquitos()*60)/(self.Duracion)),1)
+    
+
 
 
 lePlesti = open("plethysmography.txt", "r")
@@ -70,5 +72,7 @@ print(f"tiene: {len(leMandar.momentos())} picos ")
 print(f"la señal tiene un tiempo de: {leMandar.duration()}")
 print(f"tiene una frecuencia cardiaca de: {leMandar.freq()} LPM" )
 
+# from utils import graficar
+# graficar(leListe, fm = 125, t1=0, t2=1250)
 
 
