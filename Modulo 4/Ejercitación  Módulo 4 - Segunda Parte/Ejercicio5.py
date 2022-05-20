@@ -67,8 +67,18 @@ def ajustarBrillo(image, ajuste):
 
 def getHistograma(image):
     """Doc..."""
-    plt.hist()
-    pass
+    alto, ancho, canal= img.shape
+    ejex= np.linspace(0,255, num=256,dtype=np.uint8)
+    ejey= np.zeros(256)
+    for can in range(canal):
+        for j in range(alto):
+            for k in range(ancho):
+                imag = img[j, k, can]
+                ejey[imag] += 1
+    return (ejex, ejey)    
+def imprimirhist(image):
+    plt.plot(getHistograma()[0], getHistograma()[1])
+    plt.show()
 
 def getChannels(image):
     """obtengo los canales""" 
@@ -153,9 +163,10 @@ img = cv2.imread('gallina.jpg')
 gam=2
 print(getChannels(img))
 #print(img.shape)
-enviar= ajustarBrillo(img,1.1)
+enviar= getHistograma(img)
+enviar
 #enviar= ajustarGamma(img, gam)
 #enviar2 = ajustarContraste(img, alfa= 2)
-cv2.imshow("gallina.jpg", img)
-cv2.imshow("nueva comtraste", enviar)
-cv2.waitKey(0)
+# cv2.imshow("gallina.jpg", img)
+# cv2.imshow("nueva comtraste", enviar)
+# cv2.waitKey(0)

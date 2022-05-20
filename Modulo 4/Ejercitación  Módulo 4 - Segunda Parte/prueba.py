@@ -11,16 +11,16 @@ ejey= np.zeros(256)
 for can in range(canal):
     for j in range(alto):
         for k in range(ancho):
-            imag = img[j, k]
+            imag = img[j, k,can]
             ejey[imag] += 1
-            fig, argumento= plt.subplot(3)
-            argumento.plot(ejex, ejey)
             
             #histr = cv2.calcHist([img],[i],None,ejey,ejex)
-            # plt.bar(histr,hight, color = col)
-            # plt.xlim([0,256])
+            #plt.bar(histr,hight, color = col)
+            #plt.xlim([0,256])
 
+    plt.plot(ejex, ejey)
 plt.show()
+
 # img = cv2.imread('brainvessels1.jpg', cv2.IMREAD_GRAYSCALE)
 # alto, ancho = img.shape
 # cv2.imshow("brainvessels1.jpg", img)
