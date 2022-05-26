@@ -1,5 +1,5 @@
 """Las siguientes imortaciones son las demas clases incorporadas"""
-# from Matriculacion import Matriculacion
+from Matriculacion import Matriculacion
 # from Rol import Ingreso
 # from Plan_de_Estudio import UnidadCurricular, Plan_Estudio
 
@@ -34,7 +34,7 @@ sabiendo que A o a hace referecia a administrador, C o c hace referencia a coord
 los datos de ingreso son:
      ingresar:str para todos los tipos de usuarios
      
-     cedula:int=None solamente para diferenciar estudiantes
+     cedula:int= para todos los tipos de usuarios
  
  los siguientes argumentos se activan si solo si el tipo de usuario varia, por ejemplo:
  Administrativa/o:
@@ -56,6 +56,6 @@ Estudiante:
     veraprob=None 
     verprev=None
  """
-# adm1= Matriculacion(ingresar="e", cedula=1000000)
+adm1= Matriculacion(ingresar="c", cedula=67876923)
 
 
