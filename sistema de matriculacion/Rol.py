@@ -63,7 +63,7 @@ class Ingreso():
     
     def guardar_datos(self):
         if self.def_rol() == 1:
-            texto= open("Rol\admin.txt", "a")
+            texto= open("Rol\dmin.txt", "a")
             texto.write(f"{self.mostrar_rol()} {self.adquirir_nomb()} cedula {self.adquirir_ci()} ingeso {self.mostrar_ano()} rol {self.def_rol()} correo {self.asignar_mail()} \n")
             texto.close()
             return "Administrativa/o guardado"

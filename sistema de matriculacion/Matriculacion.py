@@ -20,13 +20,12 @@ from Plan_de_Estudio import UnidadCurricular, Plan_Estudio
 #         pass
 
 def obt_admin():
-    rol = open("Rol\admin.txt", "r")
+    rol = open("Rol\dmin.txt", "r")
     for linea in rol:
-        if linea.split()[8]=="1":
-            list1= linea.split()[1::2]
-            list2=linea.split()[::2]
-            list2.pop(0)
-            diccadmin= dict(zip(list1, list2))
+        list1= linea.split()[1::2]
+        list2=linea.split()[::2]
+        list2.pop(0)
+        diccadmin= dict(zip(list1, list2))
     rol.close()
     return diccadmin
         
@@ -34,11 +33,10 @@ def obt_admin():
 def obt_coord():
     rol = open("Rol\coord.txt", "r")
     for linea in rol:
-        if linea.split()[8]=="2":
-            list1= linea.split()[1::2]
-            list2=linea.split()[::2]
-            list2.pop(0)
-            dicccoord= dict(zip(list1, list2))
+        list1= linea.split()[1::2]
+        list2=linea.split()[::2]
+        list2.pop(0)
+        dicccoord= dict(zip(list1, list2))
     rol.close()
     return dicccoord
     
@@ -58,4 +56,4 @@ def obt_alum():
 
 # print(obt_admin())
 # print(obt_coord())
-# print(obt_alum())
+#print(obt_alum())
