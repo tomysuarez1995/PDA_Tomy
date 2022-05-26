@@ -1,0 +1,4 @@
+Coordinador/a Cecilia Escandon cedula 67876923 ingeso 2021 rol 2 correo Cecilia.Escandon@utec.edu.uy
+Administrativa/o Virginia Catala cedula 5689712 ingeso 2018 rol 1 correo Virginia.Catala@utec.edu.uy
+Estudiante Tomy Suárez cedula 54311063 ingeso 2018 rol 3 correo Tomy.Suárez@estudiantes.utec.edu.uy
+Estudiante Javier Milei cedula 1000000 ingeso 2022 rol 3 correo Javier.Milei@estudiantes.utec.edu.uy

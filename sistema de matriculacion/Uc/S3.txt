@@ -1,0 +1,2 @@
+{'UC': 'Optica y Radiaciones', 'creditos': 10, 'codigo': 'OyR'}, Previas: ['Anat', 'mat2', 'fisic2'], Aprobadas: ['mat1', 'Fisic1', 'SyS']
+{'UC': 'Electrotecnia', 'creditos': 10, 'codigo': 'Elect'}, Previas: ['mat2', 'fisic2'], Aprobadas: ['mat1', 'Fisic1']
