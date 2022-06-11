@@ -52,6 +52,7 @@ class Plan_Estudio(UnidadCurricular):
                 self.aprob = Aprobadas
                 self.credit = creditosUC
                 self.codigo= Codigo
+                
     def ordenar_por_semestre(self):
         """"""
         if self.mostrar_semestre() == 1:

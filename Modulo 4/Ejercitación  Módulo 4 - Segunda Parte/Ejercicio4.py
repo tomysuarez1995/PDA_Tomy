@@ -72,7 +72,7 @@ print(f"tiene: {len(leMandar.momentos())} picos ")
 print(f"la señal tiene un tiempo de: {leMandar.duration()}")
 print(f"tiene una frecuencia cardiaca de: {leMandar.freq()} LPM" )
 
-# from utils import graficar
-# graficar(leListe, fm = 125, t1=0, t2=1250)
+
+
 
 

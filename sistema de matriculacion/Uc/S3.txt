@@ -1,2 +1,5 @@
-{'UC': 'Optica y Radiaciones', 'creditos': 10, 'codigo': 'OyR'}, Previas: ['Anat', 'mat2', 'fisic2'], Aprobadas: ['mat1', 'Fisic1', 'SyS']
-{'UC': 'Electrotecnia', 'creditos': 10, 'codigo': 'Elect'}, Previas: ['mat2', 'fisic2'], Aprobadas: ['mat1', 'Fisic1']
+1,Instalaciones hospitalarias,Química general e inorgánica ,Anatomía y fisiología humanas,,,,9,3
+2,Electrónica analógica,Números complejos y ecuaciones diferenciales ,Electricidad y magnetismo,,,,10,3
+3,Óptica y radiaciones,Física eléctrica ,Números complejos y ecuaciones diferenciales,,,,10,3
+4,Electrotecnia,Números complejos y ecuaciones diferenciales,Electricidad y magnetismo,,,,9,3
+5,Programación de computadoras,Álgebra análisis y geometría analítica,,,,,8,3

@@ -1,0 +1,4 @@
+1,SEyR,Seguridad eléctrica y radiante,Instalaciones hospitalarias,Imágenes médicas,Electrofisiología clínica,,,10,5
+2,NEM,Normativa sobre equipamiento médico,Instalaciones hospitalarias,Imágenes médicas,Electrofisiología clínica,,,8,5
+3,TMEM,Taller de mantenimiento de equipos médicos,Instalaciones hospitalarias,Mecánica máquinas y materiales,Imágenes médicas,Electrofisiología clínica,,10,5
+4,PPCA,Práctica profesional curricular A,Anatomía y fisiología humanas,Números complejos y ecuaciones diferenciales,Electricidad y magnetismo,Taller inicial de tecnologías,Química orgánica y biológica,12,5

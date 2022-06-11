@@ -75,7 +75,8 @@ def getHistograma(image):
             for k in range(ancho):
                 imag = img[j, k, can]
                 ejey[imag] += 1
-    return (ejex, ejey)    
+    return (ejex, ejey) 
+
 def imprimirhist(image):
     plt.plot(getHistograma()[0], getHistograma()[1])
     plt.show()
@@ -92,7 +93,6 @@ def logT(image):
 
 def ajustarContraste(image, alfa):
     """Ajusta el contraste de una imágen.
-    
     Retorna una nueva imágen con las mismas dimensiones de la imágen original.
     """
     filas, columnas, canales = image.shape
@@ -164,9 +164,8 @@ gam=2
 print(getChannels(img))
 #print(img.shape)
 enviar= getHistograma(img)
-enviar
 #enviar= ajustarGamma(img, gam)
 #enviar2 = ajustarContraste(img, alfa= 2)
-# cv2.imshow("gallina.jpg", img)
-# cv2.imshow("nueva comtraste", enviar)
-# cv2.waitKey(0)
+cv2.imshow("gallina.jpg", img)
+cv2.imshow("nueva comtraste", enviar)
+cv2.waitKey(0)

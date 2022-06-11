@@ -1,0 +1,5 @@
+1,AyF,Anatomía y fisiología humanas,Salud y sociedad,Mecánica ondas y calor,,,,10,2
+2,Mat2,Números complejos y ecuaciones diferenciales,Álgebra análisis y geometría analítica,,,,,8,2
+3,Fis2,Electricidad y magnetismo,Álgebra análisis y geometría analítica,Mecánica ondas y calor,,,,10,2
+4,Qim2,Química orgánica y biológica,Química general e inorgánica,,,,,9,2
+5,TIT2,Taller inicial de tecnologías,,,,,,8,2

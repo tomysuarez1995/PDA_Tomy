@@ -1,2 +1,5 @@
-
-{'UC': 'Matematicas 1', 'creditos': 8, 'codigo': 'mat1'}
+1,SyS,Salud y sociedad,,,,,,8,1
+2,Mat1,Álgebra análisis y geometría analítica,,,,,,8,1
+3,Fis1,Mecánica ondas y calor,,,,,,10,1
+4,Qim1,Química general e inorgánica,,,,,,9,1
+5,TIT1,Taller inicial de tecnologías,,,,,,-,1

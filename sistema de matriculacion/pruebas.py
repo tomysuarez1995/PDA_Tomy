@@ -56,6 +56,6 @@ Estudiante:
     veraprob=None 
     verprev=None
  """
-adm1= Matriculacion(ingresar="c", cedula=67876923)
+adm1= Matriculacion(ingresar="c", cedula=67876923,)
 
 

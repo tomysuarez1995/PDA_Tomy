@@ -1,5 +1,3 @@
-from xml.dom.minidom import Identified
-from debugpy import listen
 from Rol import Ingreso
 from Plan_de_Estudio import UnidadCurricular, Plan_Estudio
 
@@ -24,7 +22,8 @@ class Matriculacion():
                             list2=linea.split()[::2]
                             list2.pop(0)
                             diccest= dict(zip(list1, list2))
-                            del diccest["rol"]
+                            diccoord.pop("rol")
+                            diccoord.pop("ingeso")
                             return diccest
                 elif ingresar == "C" or ingresar =="c":
                         if linea.split()[8]=="2":
@@ -33,7 +32,8 @@ class Matriculacion():
                                 list2=linea.split()[::2]
                                 list2.pop(0)
                                 diccoord = dict(zip(list1, list2))
-                                del diccoord["rol"]
+                                diccoord.pop("rol")
+                                diccoord.pop("ingeso")
                                 return diccoord
                 elif ingresar == "a" or ingresar =="A":
                         if linea.split()[8]=="1":
@@ -42,7 +42,8 @@ class Matriculacion():
                                 list2=linea.split()[::2]
                                 list2.pop(0)
                                 diccadm = dict(zip(list1, list2))
-                                del diccadm["rol"]
+                                diccoord.pop("rol")
+                                diccoord.pop("ingeso")
                                 return diccadm
     
 
@@ -65,8 +66,6 @@ class Coordinadora(Matriculacion):
         else:
             raise ValueError("No tiene permisos de coordinador/a")
     pass
-        
-        
         
 class Estudiante(Matriculacion):
     """clase Estudiante, solo puede matricularse y leer aprobadas y matriculadas al igual que examenes"""

@@ -1,0 +1,5 @@
+1,IM,Imágenes médicas,Anatomía y fisiología humana,Óptica y radiaciones,Electrónica analógica,,,10,4
+2,ED,Electrónica digital,Electrónica Analógica,,,,,10,4
+3,EC,Electrofisiología clínica,Anatomía y fisiología humana,Electrónica analógica,,,,10,4
+4,MMM,Mecánica máquinas y materiales,Electrotecnia,,,,,9,4
+5,PCA,Práctica profesional curricular A,Anatomía y fisiología humanas,Números complejos y ecuaciones diferenciales,Electricidad y magnetismo,Taller inicial de tecnologías,Química orgánica y biológica,-,4

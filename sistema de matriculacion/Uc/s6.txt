@@ -1,0 +1,4 @@
+1,ILC,Instrumental de laboratorio clínico,Química orgánica y biológica,Instalaciones hospitalarias,,,,9,6
+2,IfM,Informática médica,Programación de computadoras,Normativa sobre equipamiento médico,,,,6,6
+3,IMC,Instrumentación médica complementaria,Electrotecnia,Instalaciones hospitalarias,Electrofisiología clínica,Imágenes médicas,,11,6
+4,PFT,Proyecto final de titulación,Para presentar la propuesta de PFT: estar cursando una unidad curricular del 3er Semestre Para presentar la defensa del PFT: haber aprobado todas las demás unidades curriculares del Plan de Estudio,,,,,25,6
